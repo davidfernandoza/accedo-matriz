@@ -2,8 +2,7 @@
 Test de lógica con ejercicio de matriz.
 
 Ejecutar: 
-
-<a href="https://davidfernandoza.github.io/accedo-matriz/" target="_blank">https://davidfernandoza.github.io/accedo-matriz/</a>
+[link](https://davidfernandoza.github.io/accedo-matriz/){:target="_blank"}
 
 * * *
 **Problema**:
