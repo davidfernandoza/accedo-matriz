@@ -3,15 +3,12 @@
 // Funcion que retorna un nodo del html, por medio del selector e identificador
 function $(selector) {
 	try {
-		const char = selector.charAt(0),
-			identity = selector.slice(1)
+		const char = selector.charAt(0)
 		switch (char) {
 			case '#':
-				return document.getElementById([identity])
-			case '.':
-				return document.getElementsByClassName([identity])
+				return document.querySelector([selector])
 			default:
-				return null
+				return document.querySelectorAll([selector])
 		}
 	} catch (error) {
 		return error

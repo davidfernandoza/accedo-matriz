@@ -12,15 +12,8 @@ body{
 	align-content: center;
 }
 
-#container{
- display: flex;
- flex-wrap: wrap;
- width: 80%;
- height: 50%;
- background-color: white;
-}
 
-.cell{
+.cell, .disabled{
 	background-color: rgb(240, 237, 237);
 	color:  rgb(129, 124, 124);
 	border: 1px solid rgb(129, 124, 124);
@@ -30,6 +23,20 @@ body{
 	justify-content: center;
 	align-content: center;
 	flex-wrap: wrap;
-	cursor: pointer;
+	cursor: pointer;	
+}
 
+
+#container{
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	height: 50%;
+	background-color: white;
+}
+
+.disabled{
+	pointer-events: none;
+	background-color: rgb(129, 124, 124);	
+	color:  white;
 }

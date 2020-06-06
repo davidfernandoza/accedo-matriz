@@ -5,17 +5,13 @@ const colums = 10
 const alphabet = Array.from('ABCDEFGHIJKLMÑOPQRSTUVWXYZ')
 const container = $('#container')
 
-/*
- * 1) Generar celdas por posicion
- * 1.1) Las filas son numericas y las columnas son alfabeticas
- * 2) Iterar un array con el tamaño de la matriz
- * 3) Se acomoda la matriz con css
- * 4) Se genera eventos en cada celda, por lo tanto cada celda debe ser un div
- */
-
 //  Obtiene la celda precionada
 function getEvent(idCell) {
-	
+	const idCellArray = Array.from(idCell)
+	const columns = $(`.${idCellArray[0]}`)
+	const rows = $(`.row${idCellArray[1]}`)
+	disabledCells(columns)
+	disabledCells(rows)
 }
 
 // Imprime nuevos nodos mediante una iteración
@@ -25,7 +21,7 @@ function printCells() {
 			const letter = alphabet[j]
 			append(
 				container,
-				`<div onClick='getEvent("${letter}${i}")' class='cell'>
+				`<div onClick='getEvent("${letter}${i}")' class='cell ${letter} row${i}'>
 					<div>
 						${letter}${i}
 					</div>
@@ -33,6 +29,13 @@ function printCells() {
 			)
 		}
 	}
+}
+
+// Deshabilita las celdas
+function disabledCells(nodesArray) {
+	nodesArray.forEach(node => {
+		node.setAttribute('class', 'disabled')
+	})
 }
 
 printCells()
