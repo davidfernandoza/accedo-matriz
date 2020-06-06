@@ -2,10 +2,12 @@
 Test de lógica con ejercicio de matriz.
 
 Ejecutar: 
-[link](https://davidfernandoza.github.io/accedo-matriz/){:target="_blank"}
+
+<a href="https://davidfernandoza.github.io/accedo-matriz/" target="_blank">https://davidfernandoza.github.io/accedo-matriz/</a>
+
 
 * * *
-**Problema**:
+**Ejercicio**:
 
 Teniendo una matriz de 10x5, se desea deshabilitar (colorear o poner un carácter diferente) a la fila
 y columna seleccionada, se pueden seleccionar hasta 5 puntos diferentes en la matriz, siempre y
